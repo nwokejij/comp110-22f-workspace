@@ -22,8 +22,9 @@ def test_last_non_empty() -> None:
 
 # edge case
 def test_edge_value_at() -> None:
-    """Should return the index if there is an empty Linked List."""
-    assert value_at(None, 2) == 2
+    """Should return IndexError if there is an empty Linked List."""
+    with pytest.raises(IndexError):
+        value_at(None, 2)
 
 
 # use case

@@ -47,12 +47,12 @@ def last(head: Optional[Node]) -> int:
 def value_at(head: Optional[Node], index: int) -> int:
     """Returns 'head.data' stored at the given index."""
     if head is None:
-        return index
+        raise IndexError("Index is out of bounds on the list.")
     elif index == 0:
         return head.data
     else:
         return value_at(head.next, index - 1)
-
+        
 
 def max(head: Optional[Node]) -> int:
     """Returns the highest value for head.data in a linked list."""
